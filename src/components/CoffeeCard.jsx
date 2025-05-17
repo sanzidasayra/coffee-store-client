@@ -6,7 +6,7 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
-const CoffeeCard = ({coffee}) => {
+const CoffeeCard = ({coffee, coffees, setCoffees}) => {
     const {photo, name, price, quantity, _id} = coffee;
 
 const handleDelete = (_id) => {
@@ -39,6 +39,11 @@ fetch(`http://localhost:3000/coffees/${_id}`, {
       text: "Your Coffee has been deleted.",
       icon: "success"
     });
+
+    // remove the coffee from the state
+    const remainingCoffees = coffees.filter(cof => cof._id !== _id);
+    setCoffees(remainingCoffees);
+
     }
 })
   }
