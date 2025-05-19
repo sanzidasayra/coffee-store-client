@@ -1,7 +1,4 @@
-import React from 'react';
-import { AiTwotoneEye } from 'react-icons/ai';
 import { FiEdit2, FiEye } from 'react-icons/fi';
-import { MdEdit } from 'react-icons/md';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
